@@ -3641,7 +3641,7 @@
 
       const renderContent = () => {
         switch (screen) {
-          case "welcome": return <WelcomeScreen onStart={() => setScreen("terms")} />;
+          case "welcome": return <WelcomeScreen onStart={() => setScreen("account")} />;
           case "terms": return <TermsScreen onAccept={() => setScreen("account")} onBack={() => setScreen("welcome")} />;
           case "account": return <AccountScreen data={userData} setData={setUserData} onNext={() => setScreen("pregnancy")} />;
           case "pregnancy": return <PregnancyScreen data={userData} setData={setUserData} onNext={() => setScreen("body")} onBack={() => setScreen("account")} />;

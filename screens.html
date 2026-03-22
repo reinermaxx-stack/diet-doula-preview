@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diet Doula — Screen Index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Nunito', sans-serif; background: #FDF5F0; color: #3D2C35; min-height: 100vh; }
+  .header { text-align: center; padding: 48px 24px 16px; }
+  .header h1 { font-size: 32px; font-weight: 800; color: #3D2C35; margin-bottom: 6px; }
+  .header p { color: #6B5561; font-size: 15px; }
+  .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #9B8A93; padding: 0 24px; margin: 28px auto 12px; max-width: 720px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .card {
+    background: #fff; border-radius: 16px; padding: 20px; text-decoration: none;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05); border: 2px solid transparent;
+    transition: all 0.2s; display: flex; align-items: center; gap: 14px; cursor: pointer;
+  }
+  .card:hover { border-color: #E8849A; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,132,154,0.15); }
+  .card-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+  .card h3 { font-size: 15px; font-weight: 700; color: #3D2C35; margin-bottom: 2px; }
+  .card p { font-size: 12px; color: #9B8A93; line-height: 1.4; }
+  .onboarding .card-icon { background: linear-gradient(135deg, #FADDE3, #F5C2CE); }
+  .dashboard .card-icon { background: linear-gradient(135deg, #EDE5F5, #F5C2CE); }
+  .footer { text-align: center; padding: 32px 24px; color: #9B8A93; font-size: 13px; }
+  .footer a { color: #E8849A; text-decoration: none; font-weight: 600; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 8px; border-radius: 6px; margin-left: 6px; vertical-align: middle; }
+  .badge-new { background: #E8F5EC; color: #4CA868; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>Diet Doula Screens</h1>
+    <p>Click any card to jump directly to that screen (pre-filled with sample data)</p>
+  </div>
+
+  <div class="section-title">Onboarding Flow</div>
+  <div class="grid onboarding">
+    <a class="card" href="diet-doula-prototype.html#welcome">
+      <div class="card-icon">👋</div>
+      <div><h3>Welcome</h3><p>Landing / splash screen</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#terms">
+      <div class="card-icon">📜</div>
+      <div><h3>Terms & Conditions <span class="badge badge-new">New</span></h3><p>Scroll-to-accept legal agreement</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#account">
+      <div class="card-icon">📝</div>
+      <div><h3>Account Setup</h3><p>Name, email, DOB, country</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#pregnancy">
+      <div class="card-icon">🤰</div>
+      <div><h3>Pregnancy Info</h3><p>Due date, month selector</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#body">
+      <div class="card-icon">⚖️</div>
+      <div><h3>Body Details</h3><p>Weight, height, activity</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#diet">
+      <div class="card-icon">🥗</div>
+      <div><h3>Diet Preferences</h3><p>Restrictions, blood test upload</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#credentials">
+      <div class="card-icon">🔒</div>
+      <div><h3>Create Account <span class="badge badge-new">New</span></h3><p>Username/password, Google & Apple sign-in</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#allset">
+      <div class="card-icon">🎉</div>
+      <div><h3>All Set</h3><p>Summary with daily targets</p></div>
+    </a>
+  </div>
+
+  <div class="section-title">Main App (Dashboard)</div>
+  <div class="grid dashboard">
+    <a class="card" href="diet-doula-prototype.html#home">
+      <div class="card-icon">🏠</div>
+      <div><h3>Home</h3><p>Baby dev, nutrition, hydration, journal</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#log">
+      <div class="card-icon">🍽️</div>
+      <div><h3>Log Meal</h3><p>Browse & log food items</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#grocery">
+      <div class="card-icon">🛒</div>
+      <div><h3>Grocery</h3><p>Smart grocery list by nutrient gaps</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#tips">
+      <div class="card-icon">📚</div>
+      <div><h3>Learn</h3><p>Nutrients, safety, trends, roadmap</p></div>
+    </a>
+    <a class="card" href="diet-doula-prototype.html#profile">
+      <div class="card-icon">👤</div>
+      <div><h3>Profile</h3><p>User info, weight tracker, settings</p></div>
+    </a>
+  </div>
+
+  <div class="footer">
+    Or open the <a href="diet-doula-prototype.html">full interactive prototype</a> to click through from the start
+  </div>
+</body>
+</html>

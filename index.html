@@ -265,11 +265,11 @@
         calorieIncrease: 0,
         proteinGoal: 60,
         tips: [
-          "Focus on prenatal vitamins with folic acid",
-          "Stay hydrated (8-10 glasses of water daily)",
-          "Eat small, frequent meals to manage nausea",
-          "Include iron-rich foods (spinach, lean meats)",
-          "Calcium is essential for baby's development",
+          "Focus on folate-rich foods: spinach, lentils, fortified cereals, and asparagus",
+          "Stay hydrated — aim for 8-10 glasses of water daily (add lemon or cucumber if plain water triggers nausea)",
+          "Eat small, frequent meals to manage nausea — crackers, ginger tea, and bananas can help",
+          "Boost iron with spinach, lean beef, lentils, and pumpkin seeds — pair with vitamin C (oranges, bell peppers) for better absorption",
+          "Get calcium from yogurt, cheese, fortified OJ, and broccoli — baby's bones are forming!",
         ],
       },
       2: {
@@ -278,11 +278,11 @@
         calorieIncrease: 340,
         proteinGoal: 70,
         tips: [
-          "Increase calories by about 340 per day",
-          "Continue folic acid supplementation",
-          "Eat omega-3 rich foods for baby's brain",
-          "Include whole grains for fiber & energy",
-          "Monitor blood pressure & glucose levels",
+          "Increase calories by about 340/day — a smoothie with Greek yogurt, berries & spinach is an easy boost",
+          "Top omega-3 foods for baby's brain: salmon, sardines, walnuts, chia seeds, and DHA-fortified eggs",
+          "Choline is crucial now (450mg/day) — eggs, beef liver, and soybeans are your best sources",
+          "Fiber keeps things moving: black beans, oats, chia seeds, avocado, and whole grain bread",
+          "Snack smart — hummus with veggies, trail mix, or an apple with almond butter",
         ],
       },
       3: {
@@ -291,11 +291,11 @@
         calorieIncrease: 452,
         proteinGoal: 75,
         tips: [
-          "Increase calories by about 452 per day",
-          "Eat foods rich in potassium (bananas, avocados)",
-          "Include lean proteins for muscle development",
-          "Limit caffeine to less than 200mg daily",
-          "Stay hydrated to reduce swelling",
+          "Increase calories by about 452/day — add an extra snack like Greek yogurt with granola and berries",
+          "Potassium helps with swelling: bananas, avocados, sweet potatoes, and coconut water",
+          "Protein for baby's growth: salmon, chicken, eggs, lentils, and cottage cheese",
+          "Limit caffeine to under 200mg — that's about one 12oz coffee (try herbal tea instead!)",
+          "Vitamin K for delivery prep: kale, spinach, broccoli, and Brussels sprouts",
         ],
       },
     };
@@ -346,6 +346,94 @@
       { name: "Alcohol - no amount is considered safe", risk: "Can cause fetal alcohol spectrum disorders", icon: "🍷", source: "ACOG, CDC, WHO" },
       { name: "Raw sprouts (alfalfa, bean, clover)", risk: "High risk of Salmonella and E. coli", icon: "🌱", source: "FDA" },
     ];
+
+    // Symptom-to-food relief recommendations
+    const symptomFoodReliefs = {
+      "Nausea": {
+        icon: "",
+        foods: ["Ginger tea or ginger chews", "Plain crackers or toast", "Lemon water", "Peppermint tea", "Cold watermelon"],
+        avoid: "Greasy, spicy, or strong-smelling foods",
+        tip: "Eat small amounts every 2-3 hours — an empty stomach makes nausea worse. Keep crackers by your bed for mornings.",
+        source: "ACOG & Mayo Clinic",
+      },
+      "Heartburn": {
+        icon: "",
+        foods: ["Oatmeal", "Bananas", "Melons", "Ginger tea", "Yogurt", "Almonds"],
+        avoid: "Citrus, tomatoes, chocolate, caffeine, and spicy foods",
+        tip: "Eat smaller meals, stay upright after eating, and try having dinner earlier in the evening.",
+        source: "ACOG",
+      },
+      "Fatigue": {
+        icon: "",
+        foods: ["Iron-rich spinach salad", "Eggs", "Lean beef", "Lentil soup", "Trail mix with nuts & dried fruit"],
+        avoid: "Sugary snacks that cause energy crashes",
+        tip: "Fatigue can signal low iron — pair iron-rich foods with vitamin C (bell peppers, oranges) for better absorption.",
+        source: "NIH & ACOG",
+      },
+      "Constipation": {
+        icon: "",
+        foods: ["Prunes or prune juice", "Chia seed pudding", "Black beans", "Oatmeal", "Pears", "Flaxseed"],
+        avoid: "Processed/refined foods and excess cheese",
+        tip: "Aim for 28g fiber daily and drink plenty of water — fiber without hydration can make it worse!",
+        source: "Mayo Clinic",
+      },
+      "Leg cramps": {
+        icon: "",
+        foods: ["Bananas (potassium)", "Sweet potatoes", "Yogurt (magnesium)", "Salmon", "Avocado"],
+        avoid: "Excess caffeine and sodium",
+        tip: "Leg cramps are often linked to low magnesium or potassium. A banana before bed can help!",
+        source: "ACOG",
+      },
+      "Swelling": {
+        icon: "",
+        foods: ["Cucumber", "Celery", "Watermelon", "Lemon water", "Asparagus"],
+        avoid: "High-sodium foods like chips, canned soups, and deli meats",
+        tip: "Natural diuretic foods can help. Stay hydrated — drinking more water actually reduces water retention!",
+        source: "ACOG",
+      },
+      "Headache": {
+        icon: "",
+        foods: ["Water (dehydration is #1 cause!)", "Magnesium-rich almonds", "Spinach", "Dark chocolate (small amount)", "Pumpkin seeds"],
+        avoid: "Aged cheeses, artificial sweeteners, and excess caffeine",
+        tip: "Pregnancy headaches are often from dehydration or hunger. Drink water first, then eat a balanced snack.",
+        source: "Mayo Clinic",
+      },
+      "Back pain": {
+        icon: "",
+        foods: ["Anti-inflammatory salmon", "Turmeric (in food/golden milk)", "Walnuts", "Berries", "Leafy greens"],
+        avoid: "Inflammatory foods: sugar, refined carbs, fried foods",
+        tip: "Omega-3s and anti-inflammatory foods can help with pain. Gentle stretching + good nutrition is the best combo.",
+        source: "NIH",
+      },
+      "Bloating": {
+        icon: "",
+        foods: ["Ginger tea", "Papaya", "Peppermint tea", "Cucumber", "Fennel"],
+        avoid: "Carbonated drinks, beans (introduce slowly), and artificial sweeteners",
+        tip: "Eat slowly, chew thoroughly, and try smaller meals throughout the day instead of 3 big ones.",
+        source: "Mayo Clinic",
+      },
+      "Insomnia": {
+        icon: "",
+        foods: ["Warm milk", "Turkey (tryptophan)", "Chamomile tea", "Tart cherry juice", "Almonds", "Banana"],
+        avoid: "Caffeine after noon, heavy meals before bed, and spicy food at dinner",
+        tip: "A light snack with protein + complex carbs 30 min before bed can help: try whole grain toast with almond butter.",
+        source: "ACOG",
+      },
+      "Mood swings": {
+        icon: "",
+        foods: ["Omega-3 rich salmon", "Dark chocolate (small amount)", "Berries", "Walnuts", "Leafy greens"],
+        avoid: "Sugar highs/crashes — skip candy and sodas",
+        tip: "Omega-3s and B vitamins support mood. Regular meals help keep blood sugar (and mood!) stable.",
+        source: "NIH",
+      },
+      "Dizziness": {
+        icon: "",
+        foods: ["Iron-rich foods: spinach, beef, lentils", "Water (hydrate!)", "Oranges (vitamin C + iron absorption)", "Whole grain crackers"],
+        avoid: "Skipping meals or going too long without eating",
+        tip: "Dizziness is often from low blood sugar or low iron. Eat something every 2-3 hours and stay hydrated.",
+        source: "ACOG",
+      },
+    };
 
     // --- Button Component ---
     function Button({ label, onClick, style = {}, disabled = false, variant = "primary" }) {
@@ -742,10 +830,10 @@
     function BodyScreen({ data, setData, onNext, onBack }) {
       const valid = data.preWeight && data.height;
       const activities = [
-        { value: "sedentary", label: "Sedentary", desc: "Little to no exercise" },
-        { value: "light", label: "Lightly active", desc: "Light exercise 1-3 days/week" },
-        { value: "moderate", label: "Moderately active", desc: "Exercise 3-5 days/week" },
-        { value: "active", label: "Very active", desc: "Hard exercise 6-7 days/week" },
+        { value: "sedentary", label: "Taking it easy", desc: "Mostly resting or desk work" },
+        { value: "light", label: "Keeping busy", desc: "Walking, errands, or chasing a toddler" },
+        { value: "moderate", label: "Staying active", desc: "Regular workouts or on-your-feet job" },
+        { value: "active", label: "Super active", desc: "Intense exercise most days" },
       ];
       return (
         <div style={{ flex: 1, overflow: "auto", padding: "24px 28px", background: c.cream }}>
@@ -1367,11 +1455,12 @@
     }
 
     // --- Home Screen ---
-    function HomeScreen({ userData, meals, waterCups, setWaterCups, prenatalTaken, setPrenatalTaken, symptomLog, setSymptomLog }) {
+    function HomeScreen({ userData, meals, waterCups, setWaterCups, waterUnit, setWaterUnit, waterTarget, waterIncrement, prenatalTaken, setPrenatalTaken, symptomLog, setSymptomLog }) {
       const [nutritionPeriod, setNutritionPeriod] = useState("today");
 
       // --- Symptom & Craving Journal state ---
       const [journalOpen, setJournalOpen] = useState(false);
+      const [symptomReliefTips, setSymptomReliefTips] = useState([]); // shown after saving symptoms
       const [selectedSymptoms, setSelectedSymptoms] = useState([]);
       const [cravingInput, setCravingInput] = useState("");
       const [aversionInput, setAversionInput] = useState("");
@@ -1415,6 +1504,12 @@
           const filtered = prev.filter(e => e.date !== today);
           return [entry, ...filtered];
         });
+        // Generate symptom relief tips for logged symptoms
+        const reliefTips = [...selectedSymptoms]
+          .filter(s => symptomFoodReliefs[s])
+          .map(s => ({ symptom: s, ...symptomFoodReliefs[s] }));
+        setSymptomReliefTips(reliefTips);
+
         setSelectedSymptoms([]);
         setCravingsList([]);
         setAversionsList([]);
@@ -1688,16 +1783,31 @@
                 flex: 1, background: c.white, borderRadius: 16, padding: "14px",
                 boxShadow: "0 2px 10px rgba(0,0,0,0.04)",
               }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
                   <h4 style={{ fontSize: 13, fontWeight: 700, color: c.textDark, margin: 0 }}>Hydration</h4>
                   {nutritionPeriod === "today" ? (
-                    <span style={{ fontSize: 11, color: waterCups >= 10 ? c.mintDark : c.textMuted, fontWeight: 700 }}>{waterCups}/10</span>
+                    <span style={{ fontSize: 11, color: waterCups >= waterTarget ? c.mintDark : c.textMuted, fontWeight: 700 }}>
+                      {waterUnit === "oz" ? (waterCups * 8) : waterCups}/{waterTarget} {waterUnit}
+                    </span>
                   ) : (
                     <span style={{ fontSize: 11, color: c.textMuted, fontWeight: 700 }}>
                       {nutritionPeriod === "week" ? weekWaterDays + "/7 days" : monthWaterDays + "/30 days"}
                     </span>
                   )}
                 </div>
+
+                {/* Unit toggle */}
+                {nutritionPeriod === "today" && (
+                  <div style={{ display: "flex", gap: 0, marginBottom: 8, borderRadius: 8, overflow: "hidden", border: "1px solid " + c.borderLight }}>
+                    {["cups", "oz"].map(u => (
+                      <button key={u} onClick={() => setWaterUnit(u)} style={{
+                        flex: 1, padding: "4px 0", fontSize: 10, fontWeight: 700, border: "none", cursor: "pointer",
+                        background: waterUnit === u ? c.pink : c.white, color: waterUnit === u ? c.white : c.textMuted,
+                        fontFamily: "'Nunito', sans-serif", transition: "all 0.2s",
+                      }}>{u === "cups" ? "Cups" : "Ounces"}</button>
+                    ))}
+                  </div>
+                )}
 
                 {nutritionPeriod === "today" ? (
                   <>
@@ -1713,7 +1823,7 @@
                         </div>
                       ))}
                     </div>
-                    <p style={{ fontSize: 10, color: c.textMuted, margin: 0 }}>ACOG: 8-12 cups/day</p>
+                    <p style={{ fontSize: 10, color: c.textMuted, margin: 0 }}>ACOG: {waterUnit === "cups" ? "8-12 cups" : "64-96 oz"}/day</p>
                   </>
                 ) : (
                   <>
@@ -1724,7 +1834,7 @@
                       return (
                         <div style={{ textAlign: "center", padding: "4px 0" }}>
                           <p style={{ fontSize: 28, fontWeight: 800, color: pct >= 80 ? c.mintDark : pct >= 50 ? c.orange : c.red, margin: "0 0 4px", fontFamily: "'Nunito', sans-serif" }}>{pct}%</p>
-                          <p style={{ fontSize: 10, color: c.textMuted, margin: "0 0 6px" }}>days with 10+ cups</p>
+                          <p style={{ fontSize: 10, color: c.textMuted, margin: "0 0 6px" }}>days hitting goal</p>
                           <div style={{ display: "flex", gap: 2, justifyContent: "center" }}>
                             {Array.from({ length: Math.min(days, nutritionPeriod === "week" ? 7 : 15) }, (_, i) => (
                               <div key={i} style={{
@@ -2005,6 +2115,45 @@
                 </div>
               )}
             </div>
+
+            {/* ===== Symptom Relief Food Tips ===== */}
+            {symptomReliefTips.length > 0 && (
+              <div style={{ marginBottom: 14 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                  <h4 style={{ fontSize: 14, fontWeight: 700, color: c.textDark, margin: 0 }}>Foods That Can Help</h4>
+                  <button onClick={() => setSymptomReliefTips([])} style={{
+                    background: "none", border: "none", fontSize: 11, color: c.textMuted, cursor: "pointer",
+                    fontFamily: "'Nunito', sans-serif",
+                  }}>Dismiss</button>
+                </div>
+                {symptomReliefTips.map((relief, i) => (
+                  <div key={i} style={{
+                    background: c.white, borderRadius: 16, padding: "14px 16px", marginBottom: 8,
+                    border: "1.5px solid " + c.mintDark + "33",
+                  }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                      <h5 style={{ fontSize: 13, fontWeight: 700, color: c.textDark, margin: 0 }}>For your {relief.symptom.toLowerCase()}</h5>
+                    </div>
+                    <p style={{ fontSize: 11, fontWeight: 700, color: c.mintDark, margin: "0 0 4px" }}>Try these foods:</p>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginBottom: 8 }}>
+                      {relief.foods.map((f, fi) => (
+                        <span key={fi} style={{
+                          padding: "4px 10px", borderRadius: 10, fontSize: 11, fontWeight: 600,
+                          background: c.mintBg, color: c.mintDark,
+                        }}>{f}</span>
+                      ))}
+                    </div>
+                    <p style={{ fontSize: 11, color: c.textMedium, margin: "0 0 4px", lineHeight: 1.4 }}>
+                      <span style={{ fontWeight: 700, color: c.orange }}>Avoid: </span>{relief.avoid}
+                    </p>
+                    <p style={{ fontSize: 11, color: c.textDark, margin: "0 0 4px", lineHeight: 1.5, fontStyle: "italic", background: c.cream, padding: "8px 10px", borderRadius: 8 }}>
+                      💡 {relief.tip}
+                    </p>
+                    <p style={{ fontSize: 9, color: c.lavenderDark, margin: "4px 0 0" }}>Source: {relief.source}</p>
+                  </div>
+                ))}
+              </div>
+            )}
 
           </div>
         </div>
@@ -2780,6 +2929,46 @@
       const [expandedNutrient, setExpandedNutrient] = useState(null);
       const [showAllSafety, setShowAllSafety] = useState(false);
       const [activeLearnTab, setActiveLearnTab] = useState("nutrients");
+      const [safetySearch, setSafetySearch] = useState("");
+      const [safetyResult, setSafetyResult] = useState(null);
+
+      // Food safety lookup database
+      const safetyDB = [
+        { food: "sushi", safe: false, answer: "Raw sushi is not recommended during pregnancy due to risk of parasites and bacteria. Cooked sushi rolls (like California rolls with cooked crab) are generally safe.", source: "FDA & ACOG" },
+        { food: "salmon", safe: true, answer: "Cooked salmon is one of the best foods during pregnancy! It's rich in omega-3 DHA for baby's brain development. Aim for 2-3 servings per week. Avoid raw/smoked salmon.", source: "ACOG" },
+        { food: "coffee", safe: "limit", answer: "Limit to 200mg of caffeine per day (about one 12oz cup of coffee). Higher amounts are linked to low birth weight.", source: "ACOG" },
+        { food: "caffeine", safe: "limit", answer: "Limit to 200mg per day. That's roughly one 12oz coffee, two cups of tea, or four sodas. Watch for hidden caffeine in chocolate and energy bars.", source: "ACOG" },
+        { food: "wine", safe: false, answer: "No amount of alcohol is considered safe during pregnancy. It can cause fetal alcohol spectrum disorders.", source: "ACOG, CDC, WHO" },
+        { food: "alcohol", safe: false, answer: "No amount of alcohol is considered safe during pregnancy. It can cause fetal alcohol spectrum disorders.", source: "ACOG, CDC, WHO" },
+        { food: "beer", safe: false, answer: "No amount of alcohol is considered safe during pregnancy, including beer. It can cause fetal alcohol spectrum disorders.", source: "ACOG, CDC, WHO" },
+        { food: "deli meat", safe: "caution", answer: "Deli meats can carry Listeria bacteria. If you're craving a sandwich, heat the meat until steaming hot (165°F) to kill any bacteria.", source: "ACOG" },
+        { food: "hot dog", safe: "caution", answer: "Hot dogs should be heated until steaming hot (165°F) before eating to kill potential Listeria bacteria.", source: "ACOG" },
+        { food: "egg", safe: "caution", answer: "Fully cooked eggs are great — they're one of the best sources of choline (147mg per egg)! Avoid runny or raw eggs due to Salmonella risk.", source: "CDC & NIH" },
+        { food: "brie", safe: false, answer: "Soft cheeses like brie made from unpasteurized milk can carry Listeria. Check the label — if it says 'pasteurized,' it's safe!", source: "ACOG & FDA" },
+        { food: "feta", safe: "caution", answer: "Feta is safe if it's made from pasteurized milk (most US brands are). Check the label to be sure. Avoid if imported and unpasteurized.", source: "FDA" },
+        { food: "cheese", safe: "caution", answer: "Hard cheeses (cheddar, Swiss, Parmesan) are safe. Soft cheeses (brie, queso fresco) are only safe if made from pasteurized milk. Always check the label!", source: "FDA" },
+        { food: "tuna", safe: "limit", answer: "Light canned tuna is lower in mercury — limit to 2-3 servings per week. Avoid albacore/white tuna (higher mercury) to no more than 6oz per week.", source: "FDA/EPA" },
+        { food: "shrimp", safe: true, answer: "Shrimp is safe and a great low-mercury seafood choice! It provides protein and some omega-3s. Just make sure it's fully cooked.", source: "ACOG" },
+        { food: "avocado", safe: true, answer: "Avocados are excellent during pregnancy! Rich in folate, potassium, healthy fats, and fiber. Great for baby's development.", source: "USDA" },
+        { food: "pineapple", safe: true, answer: "Pineapple is perfectly safe during pregnancy despite the myths! It's a great source of vitamin C, vitamin B6, and fiber.", source: "ACOG" },
+        { food: "honey", safe: true, answer: "Honey is safe for pregnant women — the Botulism risk only applies to babies under 1 year. Enjoy it in tea or on toast!", source: "CDC" },
+        { food: "soft serve", safe: "caution", answer: "Soft serve from a clean, well-maintained machine is generally fine. The concern is Listeria from poorly cleaned machines. When in doubt, go for pre-packaged ice cream instead.", source: "FDA" },
+        { food: "ice cream", safe: true, answer: "Pre-packaged ice cream from the store is safe! Just avoid soft serve from machines that may not be properly cleaned, and homemade ice cream with raw eggs.", source: "FDA" },
+        { food: "steak", safe: "caution", answer: "Steak is safe when cooked to at least medium (145°F internal temp). Avoid rare or medium-rare during pregnancy. It's a great source of iron and protein!", source: "USDA" },
+        { food: "sprout", safe: false, answer: "Raw sprouts (alfalfa, bean, clover, radish) should be avoided — they're high risk for Salmonella and E. coli. Cooked sprouts are fine.", source: "FDA" },
+        { food: "kombucha", safe: false, answer: "Kombucha is not recommended during pregnancy. It contains small amounts of alcohol, unpasteurized bacteria, and caffeine.", source: "ACOG" },
+      ];
+
+      const handleSafetySearch = () => {
+        if (!safetySearch.trim()) return;
+        const query = safetySearch.toLowerCase().trim();
+        const match = safetyDB.find(item => query.includes(item.food) || item.food.includes(query));
+        if (match) {
+          setSafetyResult(match);
+        } else {
+          setSafetyResult({ food: query, safe: "unknown", answer: "We don't have specific data on \"" + safetySearch.trim() + "\" yet. When in doubt, check with your healthcare provider. General rule: make sure it's thoroughly cooked, pasteurized, and washed.", source: "General guidance" });
+        }
+      };
 
       const greeting = (() => {
         const hour = new Date().getHours();
@@ -2875,6 +3064,54 @@
             {/* ===== Safety Tab ===== */}
             {activeLearnTab === "safety" && (
               <div>
+                {/* Can I Eat This? Search */}
+                <div style={{
+                  background: "linear-gradient(135deg, #FFF5F7, #FDF0E9)", borderRadius: 16, padding: "16px",
+                  marginBottom: 16, border: "1.5px solid " + c.pink + "33",
+                }}>
+                  <h3 style={{ fontSize: 15, fontWeight: 700, color: c.textDark, margin: "0 0 4px" }}>Can I eat this? 🤔</h3>
+                  <p style={{ fontSize: 11, color: c.textMuted, margin: "0 0 10px" }}>Type any food to check if it's safe during pregnancy</p>
+                  <div style={{ display: "flex", gap: 8 }}>
+                    <input
+                      type="text"
+                      value={safetySearch}
+                      onChange={(e) => setSafetySearch(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleSafetySearch()}
+                      placeholder="e.g. sushi, brie, coffee..."
+                      style={{
+                        flex: 1, padding: "10px 14px", fontSize: 14, borderRadius: 12,
+                        border: "1px solid " + c.border, background: c.white,
+                        fontFamily: "'Nunito', sans-serif", color: c.textDark,
+                      }}
+                    />
+                    <button onClick={handleSafetySearch} style={{
+                      padding: "10px 16px", borderRadius: 12, border: "none",
+                      background: c.pink, color: c.white, fontSize: 13, fontWeight: 700,
+                      cursor: "pointer", fontFamily: "'Nunito', sans-serif",
+                    }}>Check</button>
+                  </div>
+
+                  {safetyResult && (
+                    <div style={{
+                      marginTop: 12, padding: "12px 14px", borderRadius: 12,
+                      background: c.white, border: "1.5px solid " + (safetyResult.safe === true ? c.mintDark : safetyResult.safe === false ? c.red : c.orange) + "44",
+                    }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                        <span style={{
+                          fontSize: 11, fontWeight: 800, textTransform: "uppercase", letterSpacing: 0.5,
+                          padding: "3px 10px", borderRadius: 8,
+                          background: safetyResult.safe === true ? "#E8F5EC" : safetyResult.safe === false ? "#FDEAEA" : safetyResult.safe === "limit" ? "#FFF3E0" : safetyResult.safe === "unknown" ? "#F0F0F0" : "#FFF8E1",
+                          color: safetyResult.safe === true ? "#4CA868" : safetyResult.safe === false ? "#D32F2F" : safetyResult.safe === "limit" ? "#E65100" : safetyResult.safe === "unknown" ? "#666" : "#F57F17",
+                        }}>
+                          {safetyResult.safe === true ? "✓ Safe" : safetyResult.safe === false ? "✗ Avoid" : safetyResult.safe === "limit" ? "⚠ Limit" : safetyResult.safe === "unknown" ? "? Unknown" : "⚠ Use Caution"}
+                        </span>
+                      </div>
+                      <p style={{ fontSize: 12, color: c.textDark, lineHeight: 1.5, margin: "0 0 4px" }}>{safetyResult.answer}</p>
+                      <p style={{ fontSize: 10, color: c.lavenderDark, margin: 0, fontStyle: "italic" }}>Source: {safetyResult.source}</p>
+                    </div>
+                  )}
+                </div>
+
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: c.textDark, margin: "0 0 4px" }}>Foods to Avoid</h3>
                 <p style={{ fontSize: 11, color: c.textMuted, margin: "0 0 12px" }}>Based on ACOG, FDA & CDC guidelines</p>
 
@@ -3249,7 +3486,7 @@
       const initials = ((userData.firstName || "D")[0] + (userData.lastName || "D")[0]).toUpperCase();
 
       // Activity label
-      const activityLabels = { sedentary: "Sedentary", light: "Lightly Active", moderate: "Moderately Active", active: "Very Active" };
+      const activityLabels = { sedentary: "Taking It Easy", light: "Keeping Busy", moderate: "Staying Active", active: "Super Active" };
 
       // Country label
       const countryLabels = { US: "United States", UK: "United Kingdom", CA: "Canada", AU: "Australia", OTHER: "Other" };
@@ -3541,18 +3778,36 @@
     }
 
     // --- Toast ---
-    function Toast({ meal, visible }) {
+    function Toast({ meal, visible, nutrientGaps }) {
       return (
         <div style={{
           position: "absolute", bottom: 80, left: 20, right: 20,
           background: c.textDark, color: c.white, borderRadius: 18,
-          padding: "14px 18px", display: "flex", alignItems: "center", gap: 10,
+          padding: "14px 18px",
           transform: visible ? "translateY(0)" : "translateY(80px)",
           opacity: visible ? 1 : 0, transition: "all 0.3s ease",
           zIndex: 100, boxShadow: "0 8px 24px rgba(0,0,0,0.2)",
         }}>
-          <span style={{ color: c.mint, fontSize: 18 }}>✓</span>
-          <span style={{ fontSize: 14, fontWeight: 500 }}>{meal?.icon} {meal?.name} logged!</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: nutrientGaps && nutrientGaps.length > 0 ? 8 : 0 }}>
+            <span style={{ color: c.mint, fontSize: 18 }}>✓</span>
+            <span style={{ fontSize: 14, fontWeight: 500 }}>{meal?.icon} {meal?.name} logged!</span>
+          </div>
+          {nutrientGaps && nutrientGaps.length > 0 && (
+            <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: 8 }}>
+              <p style={{ fontSize: 11, color: "#B0B0B0", margin: "0 0 5px", fontWeight: 600 }}>Still need today:</p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+                {nutrientGaps.slice(0, 4).map((gap, i) => (
+                  <span key={i} style={{
+                    fontSize: 10, fontWeight: 700, padding: "3px 8px", borderRadius: 8,
+                    background: gap.pct < 30 ? "rgba(239,83,80,0.25)" : "rgba(255,183,77,0.25)",
+                    color: gap.pct < 30 ? "#FF8A80" : "#FFD54F",
+                  }}>
+                    {gap.name} {gap.remaining}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       );
     }
@@ -3592,9 +3847,12 @@
         restrictions: [],
       });
       const [meals, setMeals] = useState(useSample ? [...sampleMeals] : []);
-      const [toast, setToast] = useState({ visible: false, meal: null });
+      const [toast, setToast] = useState({ visible: false, meal: null, nutrientGaps: [] });
       // Hydration tracker (cups of water today)
       const [waterCups, setWaterCups] = useState(useSample ? 4 : 0);
+      const [waterUnit, setWaterUnit] = useState("cups"); // "cups" or "oz"
+      const waterTarget = waterUnit === "cups" ? 10 : 80; // 10 cups or 80 oz
+      const waterIncrement = waterUnit === "cups" ? 1 : 8; // 1 cup or 8 oz per tap
       // Prenatal vitamin taken today
       const [prenatalTaken, setPrenatalTaken] = useState(false);
       // Weight log entries [{date, weight}]
@@ -3614,15 +3872,41 @@
         setMeals(prev => {
           // Check if same food already exists — increment qty
           const idx = prev.findIndex(m => m.name === food.name && m.category === food.category);
+          let newMeals;
           if (idx >= 0) {
-            const updated = [...prev];
-            updated[idx] = { ...updated[idx], qty: (updated[idx].qty || 1) + 1 };
-            return updated;
+            newMeals = [...prev];
+            newMeals[idx] = { ...newMeals[idx], qty: (newMeals[idx].qty || 1) + 1 };
+          } else {
+            newMeals = [...prev, { ...food, qty: 1 }];
           }
-          return [...prev, { ...food, qty: 1 }];
+
+          // Compute nutrient gaps after adding this meal
+          const newTotals = newMeals.reduce((acc, m) => {
+            const q = m.qty || 1;
+            return {
+              iron: acc.iron + (m.iron || 0) * q,
+              folate: acc.folate + (m.folate || 0) * q,
+              calcium: acc.calcium + (m.calcium || 0) * q,
+              choline: acc.choline + (m.choline || 0) * q,
+              dha: acc.dha + (m.dha || 0) * q,
+              fiber: acc.fiber + (m.fiber || 0) * q,
+              protein: acc.protein + (m.protein || 0) * q,
+            };
+          }, { iron: 0, folate: 0, calcium: 0, choline: 0, dha: 0, fiber: 0, protein: 0 });
+
+          const targets = { iron: 27, folate: 600, calcium: 1000, choline: 450, dha: 250, fiber: 28, protein: 70 };
+          const units = { iron: "mg", folate: "mcg", calcium: "mg", choline: "mg", dha: "mg", fiber: "g", protein: "g" };
+          const labels = { iron: "Iron", folate: "Folate", calcium: "Calcium", choline: "Choline", dha: "DHA", fiber: "Fiber", protein: "Protein" };
+          const gaps = Object.keys(targets)
+            .map(k => ({ name: labels[k], remaining: Math.round(targets[k] - newTotals[k]) + units[k], pct: Math.round((newTotals[k] / targets[k]) * 100) }))
+            .filter(g => g.pct < 80)
+            .sort((a, b) => a.pct - b.pct);
+
+          setToast({ visible: true, meal: food, nutrientGaps: gaps });
+          setTimeout(() => setToast({ visible: false, meal: food, nutrientGaps: [] }), 4000);
+
+          return newMeals;
         });
-        setToast({ visible: true, meal: food });
-        setTimeout(() => setToast({ visible: false, meal: food }), 2500);
       }, []);
 
       const removeMeal = useCallback((name, category) => {
@@ -3656,12 +3940,12 @@
           case "allset": return <AllSetScreen data={userData} onFinish={() => setScreen("app")} />;
           case "app":
             switch (tab) {
-              case "home": return <HomeScreen userData={userData} meals={meals} waterCups={waterCups} setWaterCups={setWaterCups} prenatalTaken={prenatalTaken} setPrenatalTaken={setPrenatalTaken} symptomLog={symptomLog} setSymptomLog={setSymptomLog} />;
+              case "home": return <HomeScreen userData={userData} meals={meals} waterCups={waterCups} setWaterCups={setWaterCups} waterUnit={waterUnit} setWaterUnit={setWaterUnit} waterTarget={waterTarget} waterIncrement={waterIncrement} prenatalTaken={prenatalTaken} setPrenatalTaken={setPrenatalTaken} symptomLog={symptomLog} setSymptomLog={setSymptomLog} />;
               case "log": return <LogScreen onAdd={addMeal} onRemove={removeMeal} userData={userData} meals={meals} />;
               case "grocery": return <GroceryScreen userData={userData} meals={meals} />;
               case "tips": return <LearnScreen userData={userData} meals={meals} symptomLog={symptomLog} weightLog={weightLog} />;
               case "profile": return <ProfileScreen userData={userData} weightLog={weightLog} setWeightLog={setWeightLog} />;
-              default: return <HomeScreen userData={userData} meals={meals} waterCups={waterCups} setWaterCups={setWaterCups} prenatalTaken={prenatalTaken} setPrenatalTaken={setPrenatalTaken} symptomLog={symptomLog} setSymptomLog={setSymptomLog} />;
+              default: return <HomeScreen userData={userData} meals={meals} waterCups={waterCups} setWaterCups={setWaterCups} waterUnit={waterUnit} setWaterUnit={setWaterUnit} waterTarget={waterTarget} waterIncrement={waterIncrement} prenatalTaken={prenatalTaken} setPrenatalTaken={setPrenatalTaken} symptomLog={symptomLog} setSymptomLog={setSymptomLog} />;
             }
           default: return <WelcomeScreen onStart={() => setScreen("terms")} />;
         }
@@ -3703,7 +3987,7 @@
               {isApp && <TabBar activeTab={tab} setActiveTab={setTab} />}
             </div>
 
-            <Toast meal={toast.meal} visible={toast.visible} />
+            <Toast meal={toast.meal} visible={toast.visible} nutrientGaps={toast.nutrientGaps} />
           </div>
         </div>
       );
